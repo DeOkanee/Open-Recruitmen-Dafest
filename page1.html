@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pendaftaran Panitia Dafest</title>
+    <link rel="stylesheet" href="css/page1.css" />
+    <link rel="stylesheet" href="css/cp.css" />
+   
+  </head>
+  <body>
+    <header>
+      <div class="logo-left">
+        <img src="img/LOGO UHN-01.png" alt="Logo Left" />
+      </div>
+      <div class="title">
+        <h1>Dafest 2024</h1>
+      </div>
+      <div class="logo-right">
+        <img src="img/LOGO ORKEMAS.png" alt="Logo Right" />
+      </div>
+    </header>
+
+    <section class="card ">
+      <img src="img/ATAS 1.jpg" alt="img" />
+      <div>
+        <h2>OPEN RECRUITMENT</h2>
+        <h3>PANITIA DAFEST 2024</h3>
+        <p class="text">
+          DAFEST (Dharma Acarya Festival) adalah suatu kegiatan masing-masing
+          jurusan di Fakultas Dharma Acarya, yang berisi hiburan tentunya.
+        </p>
+        <hr />
+        <p class="subtitle">
+          Ayo daftarkan diri Anda sebagai panitia DAFEST 2024
+        </p>
+        <a href="daftar.html">Daftar</a>
+      </div>
+    </section>
+
+    <section class="contact" style="display: none;">
+       <h1>Contact Person</h1>
+       <div class="contact-area">
+          <div class="contact-box">
+              <div class="contact-name">Wirayasa</div>
+              <a href="https://wa.me/6285792288848" class="contact-link">Whatsapp</a>
+          </div>
+          <div class="contact-box">
+            <div class="contact-name">Wirayasa</div>
+            <a href="https://wa.me/6285792288848" class="contact-link">Whatsapp</a>
+        </div>
+          <div class="contact-box">
+              <div class="contact-name">Pande Rai</div>
+              <a href="https://wa.me/62881038856541" class="contact-link">Whatsapp</a>
+          </div>
+        </div>>
+    </section>
+    <footer>
+      <div class="bawah">
+          <div class="footer-left">
+              <p>&copy; Bem fda 2024</p>
+          </div>
+          <div class="footer-right">
+              <nav>
+                  <ul>
+                      <li><a href="#">Beranda</a></li>
+                      <li><a href="#">Tentang Dafest</a></li>
+                    
+                      <li><a href="#" onclick="toggleContactSection()">Contact Person</a></li>
+                  </ul>
+              </nav>
+          </div>
+      </div>
+  </footer>
+  
+  <script>
+    function toggleContactSection() {
+      var contactSection = document.querySelector('.contact');
+      var footer = document.querySelector('footer');
+      
+      if (contactSection.style.display === 'none') {
+        contactSection.style.display = 'block';
+        footer.style.position = 'static';
+      } else {
+        contactSection.style.display = 'none';
+        footer.style.position = 'fixed';
+        footer.style.bottom = '0';
+      }
+    }
+  </script>
+  
+  </body>
+</html>

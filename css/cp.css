@@ -1,0 +1,56 @@
+/*contact*/
+.contact{
+    width: 100%;
+    margin-top: 20px;
+}
+.contact h1{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 3%;
+    color: black;
+}
+.contact-area {
+
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contact-box {
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.432);
+}
+
+.contact-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.contact-link {
+    display: block;
+    text-decoration: none;
+    background-color: #34db50;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.contact-link:hover {
+    background-color: #2980b9;
+}
+
+@media (max-width: 520px) {
+    .contact-box {
+        width: 100%;
+    }
+}

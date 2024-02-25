@@ -1,0 +1,207 @@
+@font-face {
+  font-family: "foka1";
+  src: url("font/FreeSans.ttf") format("truetype");
+}
+@font-face {
+  font-family: "foka2";
+  src: url("font/FreeSansBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "foka3";
+  src: url("font/FreeSansBoldOblique.ttf") format("truetype");
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+height: auto;
+}
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.432);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999; /* Memastikan header berada di atas konten lainnya */
+}
+
+.logo-left img,
+.logo-right img {
+  width: 50px; /* Sesuaikan ukuran logo */
+  height: auto;
+  margin: 4px 5px;
+}
+
+.title {
+  font-size: 12px;
+  text-align: center;
+  flex-grow: 1; /* Mengisi ruang kosong di tengah */
+  font-family: "Font1", sans-serif; /* Menggunakan Font1, dengan sans-serif sebagai cadangan */
+}
+
+.container {
+  margin: 0 auto;
+  margin-top: 120px; /* Menambahkan jarak atas 120px */
+  margin-bottom: 50px;
+  max-width: 600px;
+  padding: 20px 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.226);
+}
+
+h2 {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 26px;
+}
+h3{
+    font-size: 13px;
+    margin-bottom: -5px;
+}
+hr{
+    margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  margin: 0 auto;
+  display: block;
+  width: 20%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.bawah {
+ 
+  width: 100%;
+  max-width: 1200px; /* Optional: jika Anda ingin batasi lebar maksimum */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left p {
+  margin: 0;
+}
+.footer-left p a{
+  text-decoration: none;
+  color: rgb(59, 193, 255);
+}
+.footer-left p a:hover{
+  color: white;
+}
+.footer-right nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.footer-right nav ul li {
+  margin-right: 20px;
+}
+
+.footer-right nav ul li:last-child {
+  margin-right: 0;
+}
+
+.footer-right nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-right nav ul li a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 440px) {
+  .logo-left img,
+  .logo-right img {
+    width: 40px; /* Sesuaikan ukuran logo */
+  }
+
+  .title {
+    font-size: 11px;
+  }
+
+  .container {
+    margin-top: 90px; /* Tambahkan margin-top yang sesuai */
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+    margin-bottom: 20%;
+  }
+
+  .bawah {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .footer-right nav ul {
+    justify-content: center;
+  }
+
+  .footer-right nav ul li {
+    margin: 0 10px;
+  }
+}

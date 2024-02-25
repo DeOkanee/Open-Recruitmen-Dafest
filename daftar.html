@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pendaftaran Panitia Dafest</title>
+    <link rel="stylesheet" href="css/daftar.css" />
+    <link rel="stylesheet" href="css/cp.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link rel="shortcut icon" href="img/IKON DAFEST-01.jpg" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-left">
+        <img src="img/LOGO UHN-01.png" alt="Logo Left" />
+      </div>
+      <div class="title">
+        <h1>Dafest 2024</h1>
+      </div>
+      <div class="logo-right">
+        <img src="img/LOGO ORKEMAS.png" alt="Logo Right" />
+      </div>
+    </header>
+    <div class="container">
+      <h2>Pendaftaran Panitia Dafest</h2>
+      <h3>Silahkan lengkapi form dibawah ini</h3>
+      <hr />
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="entry.395925"
+            placeholder="Alamat Email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="nama">Nama Lengkap:</label>
+          <input
+            type="text"
+            id="nama"
+            name="entry.903071929"
+            placeholder="Nama Lengkap"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="kelas">Kelas:</label>
+          <input
+            type="text"
+            id="kelas"
+            name="entry.728633436"
+            placeholder="Contoh: A2 Bangli / A2 Denpasar"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="jurusan">Jurusan:</label>
+          <input type="text" id="jurusan" name="entry.1657325689" required />
+        </div>
+        <div class="form-group">
+          <label for="semester">Semester:</label>
+          <input type="number" id="semester" name="entry.1370701567" required />
+        </div>
+        <div class="form-group">
+          <label for="whatsapp">Nomor WhatsApp:</label>
+          <input
+            type="tel"
+            id="whatsapp"
+            name="entry.729787811"
+            placeholder="08 / +62"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="alamat">Alamat Lengkap:</label>
+          <textarea
+            id="alamat"
+            name="entry.674638160"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+        <button onclick="submitForm()" type="button">Kirim</button>
+      </form>
+    </div>
+    <section class="contact" style="display: none">
+      <h1>Contact Person</h1>
+      <div class="contact-area">
+        <div class="contact-box">
+          <div class="contact-name">Dwi Septiani</div>
+          <a href="https://wa.me/6283115605388" class="contact-link"
+            >Whatsapp</a
+          >
+        </div>
+        <div class="contact-box">
+          <div class="contact-name">Surya Dana</div>
+          <a href="https://wa.me/62895410784539" class="contact-link"
+            >Whatsapp</a
+          >
+        </div>
+        <div class="contact-box">
+          <div class="contact-name">Edi Suastawan</div>
+          <a href="https://wa.me/6281337593400" class="contact-link"
+            >Whatsapp</a
+          >
+        </div>
+      </div>
+      >
+    </section>
+    <footer>
+      <div class="bawah">
+        <div class="footer-left">
+          <p><a href="link_anda_di_sini">&copy; Bem fda 2024</a></p>
+        </div>
+        <div class="footer-right">
+          <nav>
+            <ul>
+              <li><a href="page1.html">Beranda</a></li>
+              <li>
+                <a
+                  href="https://www.instagram.com/dharmaacaryafestival?igsh=cm56aHhydmVoMm5n"
+                  >Tentang Dafest</a
+                >
+              </li>
+
+              <li>
+                <a href="#" onclick="toggleContactSection()">Contact Person</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function toggleContactSection() {
+        var contactSection = document.querySelector(".contact");
+        var footer = document.querySelector("footer");
+
+        if (contactSection.style.display === "none") {
+          contactSection.style.display = "block";
+          footer.style.position = "static";
+        } else {
+          contactSection.style.display = "none";
+          footer.style.position = "static";
+          footer.style.bottom = "0";
+        }
+      }
+ 
+      function submitForm() {
+    // Ambil nilai dari setiap input form
+    var emailValue = document.getElementById("email").value;
+    var namaValue = document.getElementById("nama").value;
+    var kelasValue = document.getElementById("kelas").value;
+    var jurusanValue = document.getElementById("jurusan").value;
+    var semesterValue = document.getElementById("semester").value;
+    var whatsappValue = document.getElementById("whatsapp").value;
+    var alamatValue = document.getElementById("alamat").value;
+
+    // Periksa apakah ada input yang kosong
+    if (
+      emailValue === "" ||
+      namaValue === "" ||
+      kelasValue === "" ||
+      jurusanValue === "" ||
+      semesterValue === "" ||
+      whatsappValue === "" ||
+      alamatValue === ""
+    ) {
+      // Tampilkan popup SweetAlert
+      Swal.fire({
+        icon: "info",
+        title: "Oops...",
+        text: "Silahkan lengkapi form ini!",
+      });
+    } else {
+      // URL Google Form yang baru
+      var googleFormUrl =
+        "https://docs.google.com/forms/d/e/1FAIpQLSee2bJkLzv5nVr3pBKp98yWDh75UspPptZpfJYbYKwq_JVAlQ/formResponse";
+
+      // Gabungkan data formulir dengan URL Google Forms
+      var finalUrl =
+        googleFormUrl +
+        "?entry.395925=" +
+        encodeURIComponent(emailValue) +
+        "&entry.903071929=" +
+        encodeURIComponent(namaValue) +
+        "&entry.728633436=" +
+        encodeURIComponent(kelasValue) +
+        "&entry.1657325689=" +
+        encodeURIComponent(jurusanValue) +
+        "&entry.1370701567=" +
+        encodeURIComponent(semesterValue) +
+        "&entry.729787811=" +
+        encodeURIComponent(whatsappValue) +
+        "&entry.674638160=" +
+        encodeURIComponent(alamatValue);
+
+    
+      // Tampilkan pop-up toast SweetAlert setelah pengiriman berhasil
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        },
+      });
+
+      Toast.fire({
+        icon: "success",
+        title: "Pendaftaran berhasil!",
+      }).then(() => {
+        // Redirect ke halaman atau lakukan tindakan lain setelah waktu timer habis
+        setTimeout(function () {
+          // Kirim formulir ke Google Forms
+          window.location.href = finalUrl;
+          // ke halaman lain
+          // window.location.href = 'halaman_form.html';
+        }, 2000); // Sesuaikan dengan durasi timer pada SweetAlert
+      });
+    }
+  }
+    </script>
+  </body>
+</html>
