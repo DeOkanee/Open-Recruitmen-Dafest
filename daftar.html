@@ -198,7 +198,8 @@
         "&entry.674638160=" +
         encodeURIComponent(alamatValue);
 
-    
+      // Kirim formulir ke Google Forms
+      //window.location.href = finalUrl;
       // Tampilkan pop-up toast SweetAlert setelah pengiriman berhasil
       const Toast = Swal.mixin({
         toast: true,
@@ -219,10 +220,10 @@
         // Redirect ke halaman atau lakukan tindakan lain setelah waktu timer habis
         setTimeout(function () {
           // Kirim formulir ke Google Forms
-          window.location.href = finalUrl;
+         // window.location.href = finalUrl;
           // ke halaman lain
           // window.location.href = 'halaman_form.html';
-        }, 2000); // Sesuaikan dengan durasi timer pada SweetAlert
+        }, 1000); // Sesuaikan dengan durasi timer pada SweetAlert
       });
     }
   }
