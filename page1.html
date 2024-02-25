@@ -6,7 +6,7 @@
     <title>Pendaftaran Panitia Dafest</title>
     <link rel="stylesheet" href="css/page1.css" />
     <link rel="stylesheet" href="css/cp.css" />
-   
+    <link rel="shortcut icon" href="img/IKON DAFEST-01.jpg" />
   </head>
   <body>
     <header>
@@ -21,7 +21,7 @@
       </div>
     </header>
 
-    <section class="card ">
+    <section class="card">
       <img src="img/ATAS 1.jpg" alt="img" />
       <div>
         <h2>OPEN RECRUITMENT</h2>
@@ -38,56 +38,69 @@
       </div>
     </section>
 
-    <section class="contact" style="display: none;">
-       <h1>Contact Person</h1>
-       <div class="contact-area">
-          <div class="contact-box">
-              <div class="contact-name">Wirayasa</div>
-              <a href="https://wa.me/6285792288848" class="contact-link">Whatsapp</a>
-          </div>
-          <div class="contact-box">
-            <div class="contact-name">Wirayasa</div>
-            <a href="https://wa.me/6285792288848" class="contact-link">Whatsapp</a>
+    <section class="contact" style="display: none">
+      <h1>Contact Person</h1>
+      <div class="contact-area">
+        <div class="contact-box">
+          <div class="contact-name">Dwi Septiani</div>
+          <a href="https://wa.me/6283115605388" class="contact-link"
+            >Whatsapp</a
+          >
         </div>
-          <div class="contact-box">
-              <div class="contact-name">Pande Rai</div>
-              <a href="https://wa.me/62881038856541" class="contact-link">Whatsapp</a>
-          </div>
-        </div>>
+        <div class="contact-box">
+          <div class="contact-name">Surya Dana</div>
+          <a href="https://wa.me/62895410784539" class="contact-link"
+            >Whatsapp</a
+          >
+        </div>
+        <div class="contact-box">
+          <div class="contact-name">Edi Suastawan</div>
+          <a href="https://wa.me/6281337593400" class="contact-link"
+            >Whatsapp</a
+          >
+        </div>
+      </div>
+      >
     </section>
     <footer>
       <div class="bawah">
-          <div class="footer-left">
-              <p>&copy; Bem fda 2024</p>
-          </div>
-          <div class="footer-right">
-              <nav>
-                  <ul>
-                      <li><a href="#">Beranda</a></li>
-                      <li><a href="#">Tentang Dafest</a></li>
-                    
-                      <li><a href="#" onclick="toggleContactSection()">Contact Person</a></li>
-                  </ul>
-              </nav>
-          </div>
+        <div class="footer-left">
+          <p><a href="link_anda_di_sini">&copy; Bem fda 2024</a></p>
+        </div>
+        <div class="footer-right">
+          <nav>
+            <ul>
+              <li><a href="#">Beranda</a></li>
+              <li>
+                <a
+                  href="https://www.instagram.com/dharmaacaryafestival?igsh=cm56aHhydmVoMm5n"
+                  >Tentang Dafest</a
+                >
+              </li>
+
+              <li>
+                <a href="#" onclick="toggleContactSection()">Contact Person</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
-  </footer>
-  
-  <script>
-    function toggleContactSection() {
-      var contactSection = document.querySelector('.contact');
-      var footer = document.querySelector('footer');
-      
-      if (contactSection.style.display === 'none') {
-        contactSection.style.display = 'block';
-        footer.style.position = 'static';
-      } else {
-        contactSection.style.display = 'none';
-        footer.style.position = 'fixed';
-        footer.style.bottom = '0';
+    </footer>
+
+    <script>
+      function toggleContactSection() {
+        var contactSection = document.querySelector(".contact");
+        var footer = document.querySelector("footer");
+
+        if (contactSection.style.display === "none") {
+          contactSection.style.display = "block";
+          footer.style.position = "static";
+        } else {
+          contactSection.style.display = "none";
+          footer.style.position = "static";
+          footer.style.bottom = "0";
+        }
       }
-    }
-  </script>
-  
+    </script>
   </body>
 </html>

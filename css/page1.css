@@ -133,7 +133,13 @@ footer {
 .footer-left p {
   margin: 0;
 }
-
+.footer-left p a{
+  text-decoration: none;
+  color: rgb(59, 193, 255);
+}
+.footer-left p a:hover{
+  color: white;
+}
 .footer-right nav ul {
   list-style: none;
   padding: 0;
@@ -193,6 +199,7 @@ footer {
   }
   .card {
     margin-top: 35%;
+    margin-bottom: 10%;
   }
   .card h2,h3{
    margin: 0 auto;
