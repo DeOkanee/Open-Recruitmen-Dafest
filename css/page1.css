@@ -172,6 +172,8 @@ footer {
     padding-bottom: 40px;
     width: 86%;
     flex-direction: column;
+    margin-top: 35%;
+    margin-bottom: 10%;
   }
   .card h2,h3{
     margin: 0 auto;
@@ -185,6 +187,27 @@ footer {
   }
   .card p {
     max-width: 360px;
+  }
+  .card a{
+    margin: 0 auto;
+  }
+  .bawah {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .footer-right nav ul {
+    justify-content: center;
+  }
+
+  .footer-right nav ul li {
+    margin: 0 10px;
   }
 }
 
