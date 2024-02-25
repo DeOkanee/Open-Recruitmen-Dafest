@@ -139,8 +139,7 @@ footer {
 }
 
 .footer-left p {
-  margin: 0;
-  margin-left: 30px;
+  margin: 0 auto;
 }
 .footer-left p a{
   text-decoration: none;
