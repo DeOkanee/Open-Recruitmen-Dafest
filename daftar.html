@@ -176,57 +176,49 @@
         text: "Silahkan lengkapi form ini!",
       });
     } else {
-      // URL Google Form yang baru
-      var googleFormUrl =
-        "https://docs.google.com/forms/d/e/1FAIpQLSee2bJkLzv5nVr3pBKp98yWDh75UspPptZpfJYbYKwq_JVAlQ/formResponse";
+      // Data formulir
+      var formData = new FormData();
+      formData.append('entry.395925', emailValue);
+      formData.append('entry.903071929', namaValue);
+      formData.append('entry.728633436', kelasValue);
+      formData.append('entry.1657325689', jurusanValue);
+      formData.append('entry.1370701567', semesterValue);
+      formData.append('entry.729787811', whatsappValue);
+      formData.append('entry.674638160', alamatValue);
 
-      // Gabungkan data formulir dengan URL Google Forms
-      var finalUrl =
-        googleFormUrl +
-        "?entry.395925=" +
-        encodeURIComponent(emailValue) +
-        "&entry.903071929=" +
-        encodeURIComponent(namaValue) +
-        "&entry.728633436=" +
-        encodeURIComponent(kelasValue) +
-        "&entry.1657325689=" +
-        encodeURIComponent(jurusanValue) +
-        "&entry.1370701567=" +
-        encodeURIComponent(semesterValue) +
-        "&entry.729787811=" +
-        encodeURIComponent(whatsappValue) +
-        "&entry.674638160=" +
-        encodeURIComponent(alamatValue);
-
-      // Kirim formulir ke Google Forms
-      window.location.href = finalUrl;
-      // Tampilkan pop-up toast SweetAlert setelah pengiriman berhasil
-      const Toast = Swal.mixin({
-        toast: true,
-        position: "top-end",
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.onmouseenter = Swal.stopTimer;
-          toast.onmouseleave = Swal.resumeTimer;
-        },
-      });
-
-      Toast.fire({
-        icon: "success",
-        title: "Pendaftaran berhasil!",
-      }).then(() => {
-        // Redirect ke halaman atau lakukan tindakan lain setelah waktu timer habis
-        setTimeout(function () {
-          // Kirim formulir ke Google Forms
-         // window.location.href = finalUrl;
-          // ke halaman lain
-          // window.location.href = 'halaman_form.html';
-        }, 1000); // Sesuaikan dengan durasi timer pada SweetAlert
+      // Kirim formulir ke Google Forms menggunakan fetch API
+      fetch("https://docs.google.com/forms/d/e/1FAIpQLSee2bJkLzv5nVr3pBKp98yWDh75UspPptZpfJYbYKwq_JVAlQ/formResponse", {
+          method: "POST",
+          body: formData
+      })
+      .then(response => {
+          if (response.ok) {
+              // Jika pengiriman berhasil, tampilkan pesan sukses
+              Swal.fire({
+                  icon: "success",
+                  title: "Pendaftaran berhasil!",
+              });
+          } else {
+              // Jika terjadi kesalahan, tampilkan pesan kesalahan
+              Swal.fire({
+                  icon: "error",
+                  title: "Oops...",
+                  text: "Terjadi kesalahan saat mengirimkan formulir.",
+              });
+          }
+      })
+      .catch(error => {
+          console.error("Error:", error);
+          // Tampilkan pesan kesalahan jika terjadi kesalahan yang tidak terduga
+          Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "Terjadi kesalahan yang tidak terduga.",
+          });
       });
     }
-  }
+}
+
     </script>
   </body>
 </html>
