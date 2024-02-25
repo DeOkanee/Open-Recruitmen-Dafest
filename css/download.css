@@ -56,7 +56,6 @@ header {
   padding: 50px 30px 50px 20px;
   background: #121017;
   border-radius: 10px;
-  margin-top: 90px;
 }
 .card img {
   max-width: 280px;
@@ -170,7 +169,6 @@ footer {
     padding-bottom: 40px;
     width: 86%;
     flex-direction: column;
-    margin-top: 35%;
     margin-bottom: 10%;
   }
   .card h2,
@@ -226,7 +224,6 @@ footer {
     font-size: 11px;
   }
   .card {
-    margin-top: 35%;
     margin-bottom: 10%;
   }
   .card h2,
