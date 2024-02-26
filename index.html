@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/page1.css" />
     <link rel="stylesheet" href="css/cp.css" />
     <link rel="shortcut icon" href="img/IKON DAFEST-01.jpg" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <header>
@@ -34,7 +35,7 @@
         <p class="subtitle">
           Ayo daftarkan diri Anda sebagai panitia DAFEST 2024
         </p>
-        <a href="DAFTAR2.html">Daftar</a>
+        <a href="DAFTAR2.html" id="daftarButton">Daftar</a>
       </div>
     </section>
 
@@ -101,6 +102,18 @@
           footer.style.bottom = "0";
         }
       }
+//pop up tutup
+      document.getElementById('daftarButton').addEventListener('click', function(event) {
+  event.preventDefault(); // Mencegah link default berfungsi
+  
+  swal.fire({
+    icon: "info",
+    title: "Ups..",
+    text: "Pendaftaran belum dibuka",
+   
+    footer: "Stay tuned"
+  });
+});
     </script>
   </body>
 </html>

@@ -21,11 +21,15 @@
         <img src="img/LOGO ORKEMAS.png" alt="Logo Right" />
       </div>
     </header>
- <!-- NAVBAR -->
+    <!-- NAVBAR -->
 
-  <!-- IFRAME DISINI -->
-  <iframe id="myFrame" class="web-form" src="https://forms.gle/BVjs7gdAkf1brvJm7" ></iframe>
-  <!-- IFRAME DISINI -->
+    <!-- IFRAME DISINI -->
+    <iframe
+      id="myFrame"
+      class="web-form"
+      src="https://forms.gle/BVjs7gdAkf1brvJm7"
+    ></iframe>
+    <!-- IFRAME DISINI -->
 
     <section class="contact" style="display: none">
       <h1>Contact Person</h1>
@@ -90,40 +94,40 @@
         }
       }
     </script>
-  <script>
-  // Mengambil elemen iframe
-  var iframe = document.getElementById('myFrame');
+    <script>
+      // Mengambil elemen iframe
+      var iframe = document.getElementById("myFrame");
 
-  // Menambahkan event listener untuk menangani klik tautan pertama kali
-  iframe.onload = function() {
-    var links = iframe.contentWindow.document.querySelectorAll('a');
+      // Menambahkan event listener untuk menangani klik tautan pertama kali
+      iframe.onload = function () {
+        var links = iframe.contentWindow.document.querySelectorAll("a");
 
-    links.forEach(function(link) {
-      link.addEventListener('click', handleLinkClick);
-    });
-  };
+        links.forEach(function (link) {
+          link.addEventListener("click", handleLinkClick);
+        });
+      };
 
-  // Fungsi untuk menangani klik tautan
-  function handleLinkClick(event) {
-    // Mendapatkan URL tautan yang diklik
-    var url = event.target.href;
+      // Fungsi untuk menangani klik tautan
+      function handleLinkClick(event) {
+        // Mendapatkan URL tautan yang diklik
+        var url = event.target.href;
 
-    // Mencegah tindakan default dari tautan
-    event.preventDefault();
+        // Mencegah tindakan default dari tautan
+        event.preventDefault();
 
-    // Jika URL eksternal (bukan di dalam iframe), buka di tab baru
-    if (isExternal(url)) {
-      window.open(url, '_blank');
-    } else {
-      // Jika URL di dalam iframe, buka di dalam iframe
-      iframe.src = url;
-    }
-  }
+        // Jika URL eksternal (bukan di dalam iframe), buka di tab baru
+        if (isExternal(url)) {
+          window.open(url, "_blank");
+        } else {
+          // Jika URL di dalam iframe, buka di dalam iframe
+          iframe.src = url;
+        }
+      }
 
-  // Fungsi untuk memeriksa apakah URL eksternal
-  function isExternal(url) {
-    return url.indexOf(window.location.host) === -1;
-  }
-</script>
+      // Fungsi untuk memeriksa apakah URL eksternal
+      function isExternal(url) {
+        return url.indexOf(window.location.host) === -1;
+      }
+    </script>
   </body>
 </html>
