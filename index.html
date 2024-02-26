@@ -133,15 +133,15 @@
         <i class="fa fa-thumbs-up"></i> Follow!
       `,
       confirmButtonAriaLabel: "Thumbs up, great!",
-      // Action when confirm button is clicked
-      confirmButtonColor: "#3085d6", // Optional, you can set your desired color
-      // Redirect to Instagram profile when the user clicks on "Follow"
-      confirmButtonAction: () => {
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Redirect to Instagram profile when the user clicks on "Follow"
         window.location.href = "https://www.instagram.com/dharmaacaryafestival?igshid=cm56aHhydmVoMm5n";
       }
     });
   });
 </script>
+
 
   
   </body>
