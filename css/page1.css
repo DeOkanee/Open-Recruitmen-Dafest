@@ -189,6 +189,7 @@ footer {
   }
   .card p {
     max-width: 360px;
+    text-align: center;
   }
   .card a{
     margin: 0 auto;
