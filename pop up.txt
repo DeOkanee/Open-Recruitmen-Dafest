@@ -1,0 +1,61 @@
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    Swal.fire({
+      title: "<strong>FOLLOW!!</strong>",
+      icon: "info",
+      html: `
+        Jangan lupa untuk follow <b>Instagram,
+        <a href="https://www.instagram.com/dharmaacaryafestival?igshid=cm56aHhydmVoMm5n">dharmaacaryafestival</a></b>
+       ya..
+      `,
+      showCloseButton: true, // Show the close button
+      showCancelButton: false, // Hide the cancel button
+      focusConfirm: false,
+      confirmButtonText: `
+        <i class="fa fa-thumbs-up"></i> Follow!
+      `,
+      confirmButtonAriaLabel: "Thumbs up, great!",
+      allowOutsideClick: false, // Prevent the modal from closing when clicking outside
+      allowEscapeKey: false // Prevent the modal from closing when pressing the escape key
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Redirect to Instagram profile when the user clicks on "Follow"
+        window.location.href = "https://www.instagram.com/dharmaacaryafestival?igshid=cm56aHhydmVoMm5n";
+      }
+    });
+  });
+</script>
+
+
+itu isii silang
+
+ini tidak
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    Swal.fire({
+      title: "<strong>FOLLOW!!</strong>",
+      icon: "info",
+      html: `
+        Jangan lupa untuk follow <b>Instagram,
+        <a href="https://www.instagram.com/dharmaacaryafestival?igshid=cm56aHhydmVoMm5n">dharmaacaryafestival</a></b>
+       ya..
+      `,
+      showCloseButton: false, // Hide the close button
+      showCancelButton: false, // Hide the cancel button
+      focusConfirm: false,
+      confirmButtonText: `
+        <i class="fa fa-thumbs-up"></i> Follow!
+      `,
+      confirmButtonAriaLabel: "Thumbs up, great!",
+      allowOutsideClick: false, // Prevent the modal from closing when clicking outside
+      allowEscapeKey: false // Prevent the modal from closing when pressing the escape key
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Redirect to Instagram profile when the user clicks on "Follow"
+        window.location.href = "https://www.instagram.com/dharmaacaryafestival?igshid=cm56aHhydmVoMm5n";
+      }
+    });
+  });
+</script>
