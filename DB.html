@@ -9,38 +9,38 @@
     <link rel="shortcut icon" href="img/IKON DAFEST-01.jpg" />
   </head>
   <body>
-
     <section class="card">
       <img src="img/ATAS 1.jpg" alt="img" />
       <div>
         <h2>OPEN RECRUITMENT</h2>
         <h3>PANITIA DAFEST 2024</h3>
-        
+
         <hr />
         <p class="subtitle">
-          Terimakasih telah mendaftar silahkan download berkasnya dan Join Grup WhatsApp
+          Terimakasih telah mendaftar silahkan download berkasnya dulu setelahnya muncul Join Grup
+          WhatsApp.
         </p>
-        <a href="berkas/Formulir Pendaftaran Open Recruitment  DAFEST IV.docx" download="Formulir Pendaftaran Open Recruitment  DAFEST IV.docx">Download Berkas</a>
-        <br>
-        <a href="https://chat.whatsapp.com/JELOZsdNcbmEILJFGhzQuA">Join Grup</a>
+        <a
+          href="berkas/Formulir Pendaftaran Open Recruitment  DAFEST IV.docx"
+          download="Formulir Pendaftaran Open Recruitment  DAFEST IV.docx"
+          id="downloadLink"
+          >Download Berkas</a
+        >
+        <br />
+        <a
+          href="https://chat.whatsapp.com/JELOZsdNcbmEILJFGhzQuA"
+          id="joinGroupLink"
+      
+          >Join Grup</a
+        >
       </div>
     </section>
 
-
     <script>
-      function toggleContactSection() {
-        var contactSection = document.querySelector(".contact");
-        var footer = document.querySelector("footer");
-
-        if (contactSection.style.display === "none") {
-          contactSection.style.display = "block";
-          footer.style.position = "static";
-        } else {
-          contactSection.style.display = "none";
-          footer.style.position = "static";
-          footer.style.bottom = "0";
-        }
-      }
+     document.getElementById("downloadLink").addEventListener("click", function() {
+        // Ketika tombol download ditekan, tampilkan tombol Join Grup
+        document.getElementById("joinGroupLink").style.display = "block";
+    });
     </script>
   </body>
 </html>
