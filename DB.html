@@ -37,9 +37,11 @@
     </section>
 
     <script>
-     document.getElementById("downloadLink").addEventListener("click", function() {
-        // Ketika tombol download ditekan, tampilkan tombol Join Grup
-        document.getElementById("joinGroupLink").style.display = "block";
+    document.getElementById("downloadLink").addEventListener("click", function() {
+        // Ketika tombol download ditekan, tampilkan tombol Join Grup setelah 3 detik
+        setTimeout(function() {
+            document.getElementById("joinGroupLink").style.display = "block";
+        }, 2600); // 3 detik
     });
     </script>
   </body>
