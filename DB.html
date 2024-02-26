@@ -27,7 +27,7 @@
           >Download Berkas</a
         >
         <br />
-        <span id="loadingText" style="display:none">Sedang memuat link grup WhatsApp...</span>
+        <span id="loadingText">Sedang memuat link grup WhatsApp...</span>
         <a
           href="https://chat.whatsapp.com/JELOZsdNcbmEILJFGhzQuA"
           id="joinGroupLink"
@@ -38,8 +38,11 @@
     </section>
 
     <script>
-    document.getElementById("downloadLink").addEventListener("click", function() {
-        // Menampilkan pesan "Sedang memuat link grup WhatsApp..." selama 3 detik
+     document.getElementById("downloadLink").addEventListener("click", function() {
+        // Jika pesan "Sedang memuat" ditampilkan, sembunyikan pesan tersebut
+        document.getElementById("loadingText").style.display = "none";
+
+        // Tampilkan pesan "Sedang memuat link grup WhatsApp..." selama 3 detik
         document.getElementById("loadingText").style.display = "block";
 
         setTimeout(function() {
