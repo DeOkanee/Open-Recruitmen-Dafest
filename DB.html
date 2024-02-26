@@ -38,11 +38,8 @@
     </section>
 
     <script>
-     document.getElementById("downloadLink").addEventListener("click", function() {
-        // Jika pesan "Sedang memuat" ditampilkan, sembunyikan pesan tersebut
-        document.getElementById("loadingText").style.display = "none";
-
-        // Tampilkan pesan "Sedang memuat link grup WhatsApp..." selama 3 detik
+    document.getElementById("downloadLink").addEventListener("click", function() {
+        // Menampilkan pesan "Sedang memuat link grup WhatsApp..." selama 3 detik
         document.getElementById("loadingText").style.display = "block";
 
         setTimeout(function() {
