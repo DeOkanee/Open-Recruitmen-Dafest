@@ -32,7 +32,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 999; /* Memastikan header berada di atas konten lainnya */
+  z-index: 888; /* Memastikan header berada di atas konten lainnya */
 }
 
 .logo-left img,
