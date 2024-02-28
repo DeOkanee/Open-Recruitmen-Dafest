@@ -18,3 +18,10 @@
     0% {left: 100%;} /* Mulai dari posisi di luar layar sebelah kanan */
     100% {left: -100%;} /* Pindahkan teks ke luar layar sebelah kiri */
   }
+
+  @media (max-width: 400px){
+    .SKP{
+        top: 9%;
+        font-size: 24px;
+    }
+  }
