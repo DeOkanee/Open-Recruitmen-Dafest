@@ -166,7 +166,10 @@ footer {
   text-decoration: underline;
 }
 
-
+#countdown{
+  font-size: 14px;
+  margin-top: 10px;
+}
 @media (max-width : 600px) {
   .card {
     padding-left: 20px;
@@ -215,6 +218,11 @@ footer {
 
   .footer-right nav ul li {
     margin: 0 10px;
+  }
+  #countdown{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 10px;
   }
 }
 
@@ -275,5 +283,10 @@ footer {
 
   .footer-right nav ul li {
     margin: 0 10px;
+  }
+  #countdown{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 8px;
   }
 }

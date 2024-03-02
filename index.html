@@ -40,7 +40,9 @@
           Ayo daftarkan diri Anda sebagai panitia DAFEST 2024
         </p>
         <a href="DAFTAR2.html" id="daftarButto">Daftar</a>
+        <div id="countdown"></div>
       </div>
+     
     </section>
 
     <section class="contact" style="display: none">
@@ -91,7 +93,35 @@
         </div>
       </div>
     </footer>
-
+    <script>
+      // Fungsi untuk menampilkan hitung mundur
+      function countdown() {
+        var now = new Date();
+        var target = new Date();
+        target.setHours(17, 0, 0, 0); // Set jam tutup, dalam contoh ini jam 17:00
+      
+        var difference = target - now;
+      
+        var hours = Math.floor(difference / (1000 * 60 * 60));
+        var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+      
+        var countdownElement = document.getElementById('countdown');
+        countdownElement.innerHTML = "Pendaftaran akan ditutup dalam: " + hours + " jam " + minutes + " menit " + seconds + " detik";
+      
+        if (difference <= 0) {
+          countdownElement.innerHTML = "Pendaftaran telah ditutup";
+          // Disini Anda dapat menambahkan kode untuk menonaktifkan tombol daftar jika pendaftaran telah ditutup
+          document.getElementById('daftarButto').style.display = 'none';
+          return;
+        }
+      
+        setTimeout(countdown, 1000);
+      }
+      
+      // Panggil fungsi countdown untuk memulai hitung mundur
+      countdown();
+      </script>
     <script>
       function toggleContactSection() {
         var contactSection = document.querySelector(".contact");
